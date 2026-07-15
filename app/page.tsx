@@ -148,9 +148,9 @@ export default function HomePage() {
 
             <p id="about" className="mt-5 text-neutral-400">
               Ce portfolio présente des laboratoires réalisés dans des
-              conditions proches d'une infrastructure d'entreprise. Chaque
-              projet applique l'automatisation, l'observabilité et
-              l'infrastructure as code.
+              conditions proches d&apos;une infrastructure d&apos;entreprise. Chaque
+              projet applique l'automatisation, l&apos;observabilité et
+              l&apos;infrastructure as code.
             </p>
           </div>
 
@@ -170,11 +170,10 @@ export default function HomePage() {
                 return (
                   <div
                     key={tech.name}
-                    className={`flex items-center gap-3 rounded-xl border p-3 ${
-                      tech.active === false
+                    className={`flex items-center gap-3 rounded-xl border p-3 ${tech.active === false
                         ? "border-neutral-800 bg-neutral-900 text-neutral-500"
                         : "border-neutral-700 bg-neutral-900"
-                    }`}
+                      }`}
                   >
                     <Icon
                       size={24}
@@ -209,11 +208,10 @@ export default function HomePage() {
                 <span className="font-mono text-cyan-400">{lab.id}</span>
 
                 <span
-                  className={`rounded-full px-3 py-1 text-xs ${
-                    lab.status === "Terminé"
+                  className={`rounded-full px-3 py-1 text-xs ${lab.status === "Terminé"
                       ? "bg-green-500/20 text-green-400"
                       : "bg-yellow-500/20 text-yellow-400"
-                  }`}
+                    }`}
                 >
                   {lab.status}
                 </span>
