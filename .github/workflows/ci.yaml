@@ -1,0 +1,98 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - "feature/**"
+      - "fix/**"
+      - "refactor/**"
+      - "ci/**"
+
+  workflow_dispatch:
+
+
+permissions:
+  contents: read
+
+
+jobs:
+
+  quality-check:
+
+    name: Code Quality & Tests
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # --------------------------------
+      # 1. Récupération du code
+      # --------------------------------
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # --------------------------------
+      # 2. Installation Node.js
+      # --------------------------------
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+        with:
+          node-version: 22
+          cache: npm
+
+
+      # --------------------------------
+      # 3. Installation dépendances
+      # --------------------------------
+
+      - name: Install dependencies
+        run: npm ci
+
+
+
+      # --------------------------------
+      # 4. Vérification formatage
+      # --------------------------------
+
+      - name: Check formatting
+        run: npm run format:check
+
+
+
+      # --------------------------------
+      # 5. Analyse ESLint
+      # --------------------------------
+
+      - name: Run ESLint
+        run: npm run lint
+
+
+
+      # --------------------------------
+      # 6. Vérification TypeScript
+      # --------------------------------
+
+      - name: Type checking
+        run: npm run type-check
+
+
+
+      # --------------------------------
+      # 7. Tests unitaires
+      # --------------------------------
+
+      - name: Run unit tests
+        run: npm run test
+
+
+
+      # --------------------------------
+      # 8. Build Next.js
+      # --------------------------------
+
+      - name: Build application
+        run: npm run build
