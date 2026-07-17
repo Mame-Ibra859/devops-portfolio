@@ -9,15 +9,12 @@ permissions:
   contents: read
 
 jobs:
-
   validate:
-
     name: Validate Pull Request
 
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v4
 
