@@ -149,8 +149,8 @@ export default function HomePage() {
             <p id="about" className="mt-5 text-neutral-400">
               Ce portfolio présente des laboratoires réalisés dans des
               conditions proches d&apos;une infrastructure d&apos;entreprise.
-              Chaque projet applique l'automatisation, l&apos;observabilité et
-              l&apos;infrastructure as code.
+              Chaque projet applique l&apos;automatisation, l&apos;observabilité
+              et l&apos;infrastructure as code.
             </p>
           </div>
 
