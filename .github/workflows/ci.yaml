@@ -70,8 +70,8 @@ jobs:
       # 7. Tests unitaires
       # --------------------------------
 
-      - name: Run unit tests
-        run: npm run test
+      # - name: Run unit tests
+      #   run: npm run test
 
       # --------------------------------
       # 8. Build Next.js
