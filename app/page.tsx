@@ -206,47 +206,49 @@ export default function HomePage() {
 
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {labs.map((lab) => (
-            <div
-              key={lab.id}
-              className="rounded-2xl border border-neutral-800 bg-neutral-900 p-5 transition hover:border-cyan-500/50"
-            >
-              <div className="mb-4 flex justify-between">
-                <span className="font-mono text-cyan-400">{lab.id}</span>
+            <Link key={lab.id} href={`/labs/${lab.id}`}>
+              <div
+                key={lab.id}
+                className="rounded-2xl border border-neutral-800 bg-neutral-900 p-5 transition hover:border-cyan-500/50"
+              >
+                <div className="mb-4 flex justify-between">
+                  <span className="font-mono text-cyan-400">{lab.id}</span>
 
-                <span
-                  className={`rounded-full px-3 py-1 text-xs ${
-                    lab.status === "Terminé"
-                      ? "bg-green-500/20 text-green-400"
-                      : "bg-yellow-500/20 text-yellow-400"
-                  }`}
-                >
-                  {lab.status}
-                </span>
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs ${
+                      lab.status === "Terminé"
+                        ? "bg-green-500/20 text-green-400"
+                        : "bg-yellow-500/20 text-yellow-400"
+                    }`}
+                  >
+                    {lab.status}
+                  </span>
+                </div>
+
+                <h3 className="mb-4 text-xl font-semibold">{lab.title}</h3>
+
+                <div className="flex flex-wrap gap-2">
+                  {lab.techs.map((techName) => {
+                    const tech = getTech(techName);
+
+                    if (!tech) return null;
+
+                    const Icon = tech.icon;
+
+                    return (
+                      <div
+                        key={techName}
+                        className="flex items-center gap-2 rounded-lg bg-neutral-800 px-2 py-1"
+                      >
+                        <Icon size={14} className="text-cyan-400" />
+
+                        <span className="text-xs">{techName}</span>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-
-              <h3 className="mb-4 text-xl font-semibold">{lab.title}</h3>
-
-              <div className="flex flex-wrap gap-2">
-                {lab.techs.map((techName) => {
-                  const tech = getTech(techName);
-
-                  if (!tech) return null;
-
-                  const Icon = tech.icon;
-
-                  return (
-                    <div
-                      key={techName}
-                      className="flex items-center gap-2 rounded-lg bg-neutral-800 px-2 py-1"
-                    >
-                      <Icon size={14} className="text-cyan-400" />
-
-                      <span className="text-xs">{techName}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
