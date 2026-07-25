@@ -142,15 +142,20 @@ export default function HomePage() {
             <p className="text-lg leading-8 text-neutral-300">
               Développeur orienté DevOps.
               <br />
-              Je construis des plateformes cloud modernes avec Docker,
-              Kubernetes, GitOps, Terraform, Ansible et les outils CI/CD.
+              Je conçois et exploite des plateformes cloud modernes en utilisant
+              Docker, Kubernetes, GitOps, Terraform, Ansible et les outils
+              CI/CD.
             </p>
 
             <p id="about" className="mt-5 text-neutral-400">
-              Ce portfolio présente des laboratoires réalisés dans des
-              conditions proches d&apos;une infrastructure d&apos;entreprise.
-              Chaque projet applique l&apos;automatisation, l&apos;observabilité
-              et l&apos;infrastructure as code.
+              Ce portfolio est lui-même une démonstration de cette approche.
+              L&apos;application que vous consultez actuellement est construite
+              à partir d&apos;un dépôt Git, validée automatiquement par des
+              pipelines CI/CD, conteneurisée avec Docker puis déployée sur
+              Kubernetes. Les laboratoires présentés ci-dessous détaillent les
+              différentes briques techniques qui permettent de construire,
+              sécuriser, déployer et exploiter cette plateforme dans des
+              conditions proches d&apos;un environnement de production.
             </p>
           </div>
 
