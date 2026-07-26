@@ -62,7 +62,6 @@ jobs:
           push: true
           tags: fayemameibra/devops-portfolio:v0.0.2
 
-
       # - name: Extract Docker metadata
       #   id: meta
       #   uses: docker/metadata-action@v5
