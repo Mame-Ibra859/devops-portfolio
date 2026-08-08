@@ -1,3 +1,4 @@
+import { Header } from "@/components/Header";
 import Link from "next/link";
 import type { ElementType } from "react";
 
@@ -99,32 +100,7 @@ export default function HomePage() {
     <main className="min-h-screen bg-neutral-950 text-white">
       {/* NAVBAR */}
 
-      <header className="border-b border-neutral-800">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <Link href="/" className="text-xl font-bold tracking-tight">
-            Mame Ibra FAYE
-            <span className="text-cyan-400">.</span>
-          </Link>
-
-          <nav className="flex items-center gap-8 text-sm text-neutral-400">
-            <Link href="/" className="transition hover:text-cyan-400">
-              Accueil
-            </Link>
-
-            <Link href="#labs" className="transition hover:text-cyan-400">
-              Projets
-            </Link>
-
-            <Link href="#about" className="transition hover:text-cyan-400">
-              À propos
-            </Link>
-
-            <Link href="/contact" className="transition hover:text-cyan-400">
-              Contact
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* HERO */}
 
@@ -134,11 +110,11 @@ export default function HomePage() {
             <span className="mb-5 w-fit rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm text-cyan-400">
               DevOps Engineer Portfolio
             </span>
-
-            <h1 className="mb-6 text-5xl font-bold tracking-tight lg:text-6xl">
-              Mame Ibra Faye
-            </h1>
-
+            <Link href="/">
+              <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+                Mame Ibra Faye
+              </h1>
+            </Link>
             <p className="text-lg leading-8 text-neutral-300">
               Développeur orienté DevOps.
               <br />

@@ -4,29 +4,26 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  CheckCircle2,
-  GitBranch,
-  Workflow,
-  Container,
-  AlertTriangle,
-  Trophy,
-  ArrowDown,
-} from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { GitBranchPlus } from "lucide-react";
+import { Header } from "@/components/Header";
 
 export default function PlatformFoundationLab() {
   return (
     <main className="bg-neutral-950 text-white">
       {/* HERO */}
+      <Header />
+
       <section className="border-b border-neutral-800">
         <div className="mx-auto max-w-6xl px-6 py-20">
           <span className="mb-4 inline-flex rounded-full bg-cyan-500/10 px-4 py-2 text-sm text-cyan-400">
             LAB 01
           </span>
 
-          <h1 className="mt-4 text-5xl font-bold">Platform Foundation</h1>
+          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            Platform Foundation
+          </h1>
 
           <p className="mt-6 max-w-3xl text-lg text-neutral-300">
             Ce laboratoire pose les fondations de l&apos;ensemble du portfolio.
@@ -80,8 +77,7 @@ export default function PlatformFoundationLab() {
         {/* PROBLEME */}
         <section>
           <div className="flex items-center gap-3 mb-6">
-            <AlertTriangle className="text-orange-400" size={30} />
-            <h2 className="text-3xl font-bold">1. Le problème</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">1. Le problème</h2>
           </div>
 
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
@@ -114,7 +110,9 @@ export default function PlatformFoundationLab() {
         {/* ARCHI */}
 
         <section>
-          <h2 className="mb-6 text-3xl font-bold">2. Structure du projet</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">
+            2. Structure du projet
+          </h2>
 
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
             <p className="mb-6 text-neutral-300">
@@ -191,8 +189,9 @@ export default function PlatformFoundationLab() {
 
         <section>
           <div className="flex items-center gap-3 mb-6">
-            <Workflow className="text-cyan-400" size={30} />
-            <h2 className="text-3xl font-bold">3. Architecture de livraison</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              3. Architecture de livraison
+            </h2>
           </div>
 
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
@@ -284,74 +283,9 @@ Docker Hub`}
           </div>
         </section>
 
-        {/* WORKFLOWS */}
-        {/* <section>
-                    <div className="flex items-center gap-3 mb-6">
-                        <Workflow className="text-violet-400" size={30} />
-                        <h2 className="text-3xl font-bold">
-                            4. Les Workflows
-                        </h2>
-                    </div>
-
-                    <div className="grid gap-6 lg:grid-cols-3">
-                        <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-                            <h3 className="text-xl font-semibold mb-4">
-                                Workflow 1
-                            </h3>
-
-                            <p className="text-sm text-neutral-400 mb-4">
-                                Validation des pushes.
-                            </p>
-
-                            <ul className="space-y-2 text-neutral-300">
-                                <li>✓ Install</li>
-                                <li>✓ Prettier</li>
-                                <li>✓ ESLint</li>
-                                <li>✓ TypeScript</li>
-                                <li>✓ Build</li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-                            <h3 className="text-xl font-semibold mb-4">
-                                Workflow 2
-                            </h3>
-
-                            <p className="text-sm text-neutral-400 mb-4">
-                                Validation des Pull Requests.
-                            </p>
-
-                            <ul className="space-y-2 text-neutral-300">
-                                <li>✓ Build complet</li>
-                                <li>✓ Analyse qualité</li>
-                                <li>✓ Contrôles TypeScript</li>
-                                <li>✓ Validation avant merge</li>
-                            </ul>
-                        </div>
-
-                        <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-6">
-                            <h3 className="text-xl font-semibold mb-4">
-                                Workflow 3
-                            </h3>
-
-                            <p className="text-sm text-neutral-400 mb-4">
-                                Pipeline de release.
-                            </p>
-
-                            <ul className="space-y-2 text-neutral-300">
-                                <li>✓ Docker Build</li>
-                                <li>✓ Docker Tag</li>
-                                <li>✓ Docker Push</li>
-                                <li>✓ Publication Docker Hub</li>
-                            </ul>
-                        </div>
-                    </div>
-                </section> */}
-
         <section>
           <div className="flex items-center gap-3 mb-6">
-            <Workflow className="text-violet-400" size={30} />
-            <h2 className="text-3xl font-bold">4. Les Workflows</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">4. Les Workflows</h2>
           </div>
 
           <p className="mb-8 text-neutral-300">
@@ -527,36 +461,9 @@ jobs:
           </Accordion>
         </section>
 
-        {/* DOCKER */}
-        {/* <section>
-                    <div className="flex items-center gap-3 mb-6">
-                        <Container className="text-blue-400" size={30} />
-                        <h2 className="text-3xl font-bold">
-                            5. Docker
-                        </h2>
-                    </div>
-
-                    <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
-                        <p className="mb-6 text-neutral-300">
-                            L&apos;application est empaquetée dans une image Docker
-                            optimisée afin d&apos;être déployable sur n&apos;importe quelle
-                            plateforme compatible OCI.
-                        </p>
-
-                        <div className="rounded-xl bg-neutral-800 p-6 font-mono text-sm">
-                            docker build -t mameibra/devops-portfolio:latest .
-                        </div>
-
-                        <div className="mt-4 rounded-xl bg-neutral-800 p-6 font-mono text-sm">
-                            docker push mameibra/devops-portfolio:latest
-                        </div>
-                    </div>
-                </section> */}
-
         <section>
           <div className="flex items-center gap-3 mb-6">
-            <Container className="text-blue-400" size={30} />
-            <h2 className="text-3xl font-bold">5. Docker</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">5. Docker</h2>
           </div>
 
           <p className="mb-8 text-neutral-300">
@@ -587,24 +494,26 @@ Portfolio en production`}
 
           <div className="mt-6 grid gap-4 lg:grid-cols-2">
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-              <h3 className="font-semibold text-cyan-400 mb-3">
-                Construction de l&apos;image
+              <h3 className="mb-3 font-semibold text-cyan-400">
+                Construction de l'image
               </h3>
 
-              <pre className="overflow-x-auto rounded-lg bg-neutral-950 p-4 text-sm">
-                {`docker build \
--t mameibra/devops-portfolio:latest .`}
+              <pre className="overflow-x-auto rounded-lg bg-neutral-950 p-4 text-xs sm:text-sm">
+                <code className="whitespace-pre-wrap break-all">
+                  {`docker build -t mameibra/devops-portfolio:latest .`}
+                </code>
               </pre>
             </div>
 
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
-              <h3 className="font-semibold text-cyan-400 mb-3">
+              <h3 className="mb-3 font-semibold text-cyan-400">
                 Publication Docker Hub
               </h3>
 
-              <pre className="overflow-x-auto rounded-lg bg-neutral-950 p-4 text-sm">
-                {`docker push \
-mameibra/devops-portfolio:latest`}
+              <pre className="overflow-x-auto rounded-lg bg-neutral-950 p-4 text-xs sm:text-sm">
+                <code className="whitespace-pre-wrap break-all">
+                  {`docker push mameibra/devops-portfolio:latest`}
+                </code>
               </pre>
             </div>
           </div>
@@ -622,8 +531,9 @@ mameibra/devops-portfolio:latest`}
         {/* DIFFICULTES */}
         <section>
           <div className="flex items-center gap-3 mb-6">
-            <AlertTriangle className="text-yellow-400" size={30} />
-            <h2 className="text-3xl font-bold">6. Difficultés rencontrées</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              6. Difficultés rencontrées
+            </h2>{" "}
           </div>
 
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
@@ -660,8 +570,7 @@ mameibra/devops-portfolio:latest`}
         {/* RESULTAT */}
         <section>
           <div className="flex items-center gap-3 mb-6">
-            <Trophy className="text-green-400" size={30} />
-            <h2 className="text-3xl font-bold">7. Résultat</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">7. Résultat</h2>
           </div>
 
           <div className="rounded-2xl border border-green-500/20 bg-green-500/5 p-8">
@@ -696,6 +605,16 @@ mameibra/devops-portfolio:latest`}
               laboratoires suivants du portfolio. Il démontre la maîtrise des
               principes Git, CI/CD, Docker et automatisation des déploiements.
             </p>
+          </div>
+          {/* Liens vers les laboratoires suivants a droite */}
+          <div className="mt-8 flex justify-end">
+            <Link
+              href="/labs/02"
+              className="inline-flex items-center gap-2 rounded-lg border border-cyan-500/20 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-400 transition hover:bg-cyan-500/20"
+            >
+              <span>Suivant : Kubernetes</span>
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </section>
       </div>
