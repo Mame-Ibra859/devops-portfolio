@@ -1,8 +1,4 @@
-import {
-  Settings,
-  Lock,
-  CheckCircle2,
-} from "lucide-react";
+import { Settings, Lock, CheckCircle2 } from "lucide-react";
 
 import {
   Accordion,
@@ -20,31 +16,23 @@ export default function ConfigurationManagement() {
         </h3>
 
         <p className="mt-4 text-sm leading-7 text-neutral-300 sm:mt-6 sm:text-base sm:leading-8">
-          Dans une plateforme Kubernetes, les paramètres de configuration
-          et les informations sensibles ne doivent pas être intégrés
-          directement dans l&apos;image Docker.
+          Dans une plateforme Kubernetes, les paramètres de configuration et les
+          informations sensibles ne doivent pas être intégrés directement dans
+          l&apos;image Docker.
         </p>
 
         <p className="mt-3 text-sm leading-7 text-neutral-300 sm:mt-4 sm:text-base sm:leading-8">
-          Kubernetes fournit deux mécanismes dédiés :
-          les{" "}
-          <span className="font-semibold text-cyan-400">
-            ConfigMaps
-          </span>{" "}
-          pour la configuration applicative et les{" "}
-          <span className="font-semibold text-red-400">
-            Secrets
-          </span>{" "}
-          pour les données sensibles.
+          Kubernetes fournit deux mécanismes dédiés : les{" "}
+          <span className="font-semibold text-cyan-400">ConfigMaps</span> pour
+          la configuration applicative et les{" "}
+          <span className="font-semibold text-red-400">Secrets</span> pour les
+          données sensibles.
         </p>
 
         {/* CONFIGMAP */}
         <div className="mt-12">
           <div className="flex items-center gap-3">
-            <Settings
-              size={22}
-              className="text-cyan-400"
-            />
+            <Settings size={22} className="text-cyan-400" />
 
             <h4 className="text-xl font-semibold">
               Configuration avec ConfigMap
@@ -52,21 +40,17 @@ export default function ConfigurationManagement() {
           </div>
 
           <p className="mt-5 leading-7 text-neutral-300">
-            Les paramètres fonctionnels de l&apos;application sont
-            stockés dans une ConfigMap afin d&apos;être modifiés
-            indépendamment de l&apos;image Docker.
+            Les paramètres fonctionnels de l&apos;application sont stockés dans
+            une ConfigMap afin d&apos;être modifiés indépendamment de
+            l&apos;image Docker.
           </p>
 
-          <Accordion
-            className="mt-6"
-          >
+          <Accordion className="mt-6">
             <AccordionItem
               value="configmap"
               className="rounded-xl border border-neutral-700 px-5"
             >
-              <AccordionTrigger>
-                ConfigMap du portfolio
-              </AccordionTrigger>
+              <AccordionTrigger>ConfigMap du portfolio</AccordionTrigger>
 
               <AccordionContent>
                 <pre className="overflow-x-auto rounded-lg bg-neutral-950 p-5 text-sm text-cyan-300">
@@ -83,16 +67,13 @@ data:
           </Accordion>
 
           <div className="mt-5 rounded-xl border border-cyan-500/20 bg-cyan-500/10 p-4 sm:mt-6 sm:p-5">
-            <div className="font-mono text-cyan-300">
-              DB_HOST = postgres
-            </div>
+            <div className="font-mono text-cyan-300">DB_HOST = postgres</div>
           </div>
 
           <p className="mt-6 leading-7 text-neutral-300">
-            Grâce à cette approche, l&apos;application récupère
-            automatiquement l&apos;adresse du service PostgreSQL sans que
-            cette information soit codée en dur dans l&apos;application ou
-            l&apos;image Docker.
+            Grâce à cette approche, l&apos;application récupère automatiquement
+            l&apos;adresse du service PostgreSQL sans que cette information soit
+            codée en dur dans l&apos;application ou l&apos;image Docker.
           </p>
 
           <p className="mt-4 leading-7 text-neutral-300">
@@ -105,10 +86,7 @@ data:
         {/* SECRET */}
         <div className="mt-12">
           <div className="flex items-center gap-3">
-            <Lock
-              size={22}
-              className="text-red-400"
-            />
+            <Lock size={22} className="text-red-400" />
 
             <h4 className="text-xl font-semibold">
               Protection des données avec Secret
@@ -116,21 +94,17 @@ data:
           </div>
 
           <p className="mt-5 leading-7 text-neutral-300">
-            Les informations sensibles suivent une approche différente.
-            Les mots de passe, clés API ou tokens ne doivent jamais
-            apparaître directement dans les manifests Kubernetes.
+            Les informations sensibles suivent une approche différente. Les mots
+            de passe, clés API ou tokens ne doivent jamais apparaître
+            directement dans les manifests Kubernetes.
           </p>
 
-          <Accordion
-            className="mt-6"
-          >
+          <Accordion className="mt-6">
             <AccordionItem
               value="secret"
               className="rounded-xl border border-neutral-700 px-5"
             >
-              <AccordionTrigger>
-                Secret PostgreSQL
-              </AccordionTrigger>
+              <AccordionTrigger>Secret PostgreSQL</AccordionTrigger>
 
               <AccordionContent>
                 <pre className="overflow-x-auto rounded-lg bg-neutral-950 p-5 text-sm text-cyan-300">
@@ -147,9 +121,7 @@ data:
           </Accordion>
 
           <div className="mt-5 rounded-xl border border-red-500/20 bg-red-500/10 p-4 sm:mt-6 sm:p-5">
-            <div className="font-mono text-red-300">
-              DB_PASSWORD
-            </div>
+            <div className="font-mono text-red-300">DB_PASSWORD</div>
           </div>
 
           <p className="mt-6 leading-7 text-neutral-300">
@@ -161,22 +133,19 @@ data:
           </p>
 
           <p className="mt-4 leading-7 text-neutral-300">
-            Ainsi, aucune information sensible n&apos;apparaît directement
-            dans les manifests de déploiement ni dans le code de
-            l&apos;application.
+            Ainsi, aucune information sensible n&apos;apparaît directement dans
+            les manifests de déploiement ni dans le code de l&apos;application.
           </p>
         </div>
 
         {/* INJECTION DANS LE POD */}
         <div className="mt-8 rounded-2xl border border-neutral-700 bg-neutral-950 p-4 sm:mt-12 sm:p-6">
-          <h4 className="font-semibold text-lg">
-            Injection dans le conteneur
-          </h4>
+          <h4 className="font-semibold text-lg">Injection dans le conteneur</h4>
 
           <p className="mt-4 leading-7 text-neutral-300">
-            Au démarrage du Pod, Kubernetes injecte automatiquement les
-            valeurs provenant de la ConfigMap et du Secret sous forme de
-            variables d&apos;environnement.
+            Au démarrage du Pod, Kubernetes injecte automatiquement les valeurs
+            provenant de la ConfigMap et du Secret sous forme de variables
+            d&apos;environnement.
           </p>
 
           <pre className="mt-5 overflow-x-auto rounded-lg bg-black/40 p-5 text-sm text-cyan-300">
@@ -200,18 +169,16 @@ data:
           <div className="flex items-center gap-3">
             <CheckCircle2 className="text-green-400" />
 
-            <h4 className="font-semibold text-green-300">
-              Résultat obtenu
-            </h4>
+            <h4 className="font-semibold text-green-300">Résultat obtenu</h4>
           </div>
 
           <p className="mt-3 text-sm leading-7 text-green-100 sm:mt-4 sm:text-base">
-            La configuration de l&apos;application est désormais
-            totalement séparée de l&apos;image Docker. Les paramètres
-            fonctionnels peuvent évoluer via des ConfigMaps tandis que
-            les informations sensibles sont protégées dans des Secrets.
-            Cette approche facilite l&apos;administration de la plateforme
-            et respecte les bonnes pratiques Kubernetes.
+            La configuration de l&apos;application est désormais totalement
+            séparée de l&apos;image Docker. Les paramètres fonctionnels peuvent
+            évoluer via des ConfigMaps tandis que les informations sensibles
+            sont protégées dans des Secrets. Cette approche facilite
+            l&apos;administration de la plateforme et respecte les bonnes
+            pratiques Kubernetes.
           </p>
         </div>
       </div>

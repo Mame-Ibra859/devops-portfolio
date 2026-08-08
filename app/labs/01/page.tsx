@@ -4,10 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  CheckCircle2,
-  ArrowRight,
-} from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { GitBranchPlus } from "lucide-react";
 import { Header } from "@/components/Header";
@@ -24,7 +21,9 @@ export default function PlatformFoundationLab() {
             LAB 01
           </span>
 
-          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">Platform Foundation</h1>
+          <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            Platform Foundation
+          </h1>
 
           <p className="mt-6 max-w-3xl text-lg text-neutral-300">
             Ce laboratoire pose les fondations de l&apos;ensemble du portfolio.
@@ -111,7 +110,9 @@ export default function PlatformFoundationLab() {
         {/* ARCHI */}
 
         <section>
-          <h2 className="text-2xl md:text-3xl font-bold">2. Structure du projet</h2>
+          <h2 className="text-2xl md:text-3xl font-bold">
+            2. Structure du projet
+          </h2>
 
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
             <p className="mb-6 text-neutral-300">
@@ -188,7 +189,9 @@ export default function PlatformFoundationLab() {
 
         <section>
           <div className="flex items-center gap-3 mb-6">
-            <h2 className="text-2xl md:text-3xl font-bold">3. Architecture de livraison</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              3. Architecture de livraison
+            </h2>
           </div>
 
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
@@ -489,7 +492,6 @@ Portfolio en production`}
             </pre>
           </div>
 
-
           <div className="mt-6 grid gap-4 lg:grid-cols-2">
             <div className="rounded-xl border border-neutral-800 bg-neutral-900 p-5">
               <h3 className="mb-3 font-semibold text-cyan-400">
@@ -531,7 +533,8 @@ Portfolio en production`}
           <div className="flex items-center gap-3 mb-6">
             <h2 className="text-2xl md:text-3xl font-bold">
               6. Difficultés rencontrées
-            </h2>          </div>
+            </h2>{" "}
+          </div>
 
           <div className="rounded-2xl border border-neutral-800 bg-neutral-900 p-8">
             <ul className="space-y-5">
