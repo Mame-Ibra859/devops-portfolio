@@ -56,19 +56,19 @@ const labs = [
   {
     id: "03",
     title: "GitOps Platform",
-    status: "Terminé",
+    status: "En cours",
     techs: ["FluxCD", "Kubernetes"],
   },
   {
     id: "04",
     title: "Terraform Lab",
-    status: "Terminé",
+    status: "En cours",
     techs: ["Terraform"],
   },
   {
     id: "05",
     title: "Ansible Lab",
-    status: "Terminé",
+    status: "En cours",
     techs: ["Ansible"],
   },
   {
@@ -151,11 +151,10 @@ export default function HomePage() {
                 return (
                   <div
                     key={tech.name}
-                    className={`flex items-center gap-3 rounded-xl border p-3 ${
-                      tech.active === false
+                    className={`flex items-center gap-3 rounded-xl border p-3 ${tech.active === false
                         ? "border-neutral-800 bg-neutral-900 text-neutral-500"
                         : "border-neutral-700 bg-neutral-900"
-                    }`}
+                      }`}
                   >
                     <Icon
                       size={24}
@@ -191,11 +190,10 @@ export default function HomePage() {
                   <span className="font-mono text-cyan-400">{lab.id}</span>
 
                   <span
-                    className={`rounded-full px-3 py-1 text-xs ${
-                      lab.status === "Terminé"
+                    className={`rounded-full px-3 py-1 text-xs ${lab.status === "Terminé"
                         ? "bg-green-500/20 text-green-400"
                         : "bg-yellow-500/20 text-yellow-400"
-                    }`}
+                      }`}
                   >
                     {lab.status}
                   </span>
