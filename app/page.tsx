@@ -56,19 +56,19 @@ const labs = [
   {
     id: "03",
     title: "GitOps Platform",
-    status: "Terminé",
+    status: "En cours",
     techs: ["FluxCD", "Kubernetes"],
   },
   {
     id: "04",
     title: "Terraform Lab",
-    status: "Terminé",
+    status: "En cours",
     techs: ["Terraform"],
   },
   {
     id: "05",
     title: "Ansible Lab",
-    status: "Terminé",
+    status: "En cours",
     techs: ["Ansible"],
   },
   {
